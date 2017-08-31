@@ -1,0 +1,38 @@
+{
+  "name": "WhatsApp",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Just another WhatsApp client for Linux",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "NODE_ENV='development' electron . --inspect --devtools",
+    "dist": "build -l --x64"
+  },
+  "repository": "https://github.com/saisasidhar/whatsapp",
+  "author": {
+    "name": "Sai Sasidhar Maddali",
+    "email": "mail@sasidhar.in"
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.1",
+    "electron-context-menu": "^0.9.1",
+    "electron-json-storage-sync": "^1.1.0",
+    "minimist": "1.2.0"
+  },
+  "devDependencies": {
+    "electron": "~1.6.2",
+    "electron-builder": "^17.0.1",
+    "electron-debug": "^1.4.0"
+  },
+  "build": {
+    "icon": "build/icon.icns",
+    "appId": "in.sasidhar.WhatsApp",
+    "linux": {
+      "category": "Other",
+      "target": [
+        "deb"
+      ]
+    }
+  }
+}
